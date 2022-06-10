@@ -1,0 +1,67 @@
+/* UC 1 ::: Homepage of Address Book App with logo*/ 
+*{
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: serif;
+    color: transparent;
+    text-align: center;
+    animation: effect 1s linear infinite;
+}
+
+@keyframes effect {
+    0% {
+        background: linear-gradient(
+                #008000, #00FF00);
+        -webkit-background-clip: text;
+    }
+
+    100% {
+        background: linear-gradient(
+                #3CE7D7, #000FFF);
+        -webkit-background-clip: text;
+    }
+}
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.header{
+    padding: 15px 0;
+    background-color: #f6eeee;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid blue;
+}
+
+.logo-content{
+    padding-left: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid rgb(99, 171, 253);
+    width: 80%;
+}
+
+.logo-content-img{
+    border: solid 0px #59aaf1;
+}
+
+.address-text{
+    font: normal normal bold 20px/25px Montserrat;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0px;
+    color: #5394e9;
+    text-transform: capitalize;
+    text-align: left;
+    opacity: 1;
+}
