@@ -7,10 +7,12 @@
     <title>Address Book Form</title>
     <link rel="stylesheet" href="Address_Book_Form.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="Address_Book_form.js"></script>
+    <script src="Contacts.js"></script>
+
 </head>
 <body>
     <!-- UC 1-->
-    <h1> Welcome to the Address Book </h1>
     <header class="header-content header">
         <div class="logo-content">
             <img src="assets\aadressbookimage.png" alt="logo">
@@ -26,59 +28,78 @@
         <form class="form" action="#" onreset="resetForm()" onadd="Add()">
             <div class="form-head">
                 <div class="form-head-text">Person Address Form</div>
-                <a href="Home_Page.html"><img class="form-head-image" src="assets\cross.png" alt="logo"></a>
+                <a href="Home_Page.html"><img class="form-head-image" src="assets\cancelButton (1).png" alt="logo"></a>
             </div>
             
             <!-- UC 3-->
             <div class="row-content">
                 <label for="name" class="label text"> Full Name </label>
                 <input type="text" name="name" id="name" class="input" placeholder="Enter Your Full Name here..." required>
+                <error-output class="name-error"></error-output>             <!-- UC 4-->
             </div>
 
             <div class = "row-content">
-                <label class="label text" for="address">  Address </label>
-                <input type="text" name="Address" class="input" id="address" placeholder="Address.." style="height: 100px;" required>
+                <label class="label text" for="address"> Address </label>
+                <input type="text" name="Address" class="input" id="address" placeholder=" Your Current Address..." style="height: 80px;" required>
+                <error-output class="address-error"></error-output>            <!-- UC 4-->
             </div>
 
             <div class="row-content">
-                <div class="column-content">
+                <div class="column-data">
+                    <div class="column-content">
                     <label for="city" class="label text">City</label>
                     <br>
                     <select name="city" id="city" required>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Bangalore">Bangalore</option>
-                        <option value="Pune">Pune</option>
+                        <option selected disabled hidden value="Select City">Select City</option>
+                        <option value="Banglore">Banglore</option>
                         <option value="Delhi">Delhi</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Indore">Indore</option>
+                        <option value="Hyderabad">Hyderabad</option>   
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Surat">Surat</option>
                     </select>
-                </div>
 
-                <div class="column-content">
+                    </div>
+                    <div class="column-content">
                     <label for="state" class="label text">State</label>
                     <br>
                     <select name="state" id="state">
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Telangana">Telangana</option>
+                        <option selected disabled hidden value="Select State">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Gujrat">Gujrat</option>
                     </select>
-                </div>
 
-                <div class="column-content">
-                    <label for="pincode" class="label text">Pin code</label>
+                    </div>
+                    <div class="column-content">
+                    <label for="pin" class="label text">Pin code</label>
                     <br>
-                    <input type="text" class="input pincode" id="pin" name="pin" placeholder="pincode" required>
+                    <input type="text" class="input pincode" id="pin" name="pin" autocomplete="off" placeholder="000000" required>
+                    <error-output class="pin-error"></error-output>         <!-- UC 4-->
+                    </div>
                 </div>
             </div>
 
             <div class="row-content">
                 <label for="phone" class="label text"> Phone Number </label>
                 <input type="text" name="phone" id="phone" class="input" placeholder="Enter Your Number" required>
+                <error-output class="phone-error"></error-output>          <!-- UC 4-->
             </div>
-            
+
+            <div class="buttons">
+                <div class="add-reset">
+                    <button type = "add" class="button addButton" id = "addButton">Add</button>
+                    <button type = "reset" class = "button resetButton">Reset</button>
+                </div>
+            </div>
+
         </form>
     </div>
 </body>

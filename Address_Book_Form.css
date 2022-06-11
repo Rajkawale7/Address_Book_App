@@ -1,25 +1,4 @@
 /* UC 1 ::: Homepage of Address Book App with logo*/ 
-h1 {
-    font-size: 30px;
-    font-family: serif;
-    color: transparent;
-    text-align: center;
-    animation: effect 1s linear infinite;
-}
-
-@keyframes effect {
-    0% {
-        background: linear-gradient(
-                #008000, #00FF00);
-        -webkit-background-clip: text;
-    }
-
-    100% {
-        background: linear-gradient(
-                #3CE7D7, #000FFF);
-        -webkit-background-clip: text;
-    }
-}
 
 *{
     box-sizing: border-box;
@@ -32,7 +11,7 @@ body{
 
 .header {
     padding: 10px 0;
-    background: #e9e7e7 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
@@ -85,7 +64,7 @@ body{
 /* for form header*/  
 .form {
     background: #ffffff 0% 0% no-repeat padding-box;
-    min-width: 1050px;
+    min-width: 1000px;
     margin: 1%;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #f5f5f5;
@@ -98,15 +77,15 @@ body{
     background: #008cff 0% 0% no-repeat padding-box;
     border-radius: 8px 8px 0px 0px;
     opacity: 1;
-    padding: 30px;
+    padding: 8px;
 }
   
 .form-head-text {
-    flex: 6;
+    flex: 5;
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    font: normal normal normal 28px/37px Roboto;
+    font: normal normal normal 20px/50px Roboto;
     letter-spacing: 0px;
     color: #ffffff;
     text-transform: uppercase;
@@ -116,40 +95,126 @@ body{
 .form-head-image {
     flex: 6;
     text-align:end;
-    width: 6%;
+    width: 80%;
     margin: 0 auto;
     opacity: 1;
 }
 
 /* for Rows Content*/  
 .row-content {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    min-width: 50%;
+    min-height: 80%;
+    max-width: 100%;
 }
 
-.label {
-    min-width: 140px;
+.form-data {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 label {
-    padding: 12px 12px 12px 0px;
+    padding: 5px 8px;
     display: inline-block;
+    margin-top: 10px;
 }
 
 .text {
-    font-size: 16px;
-    color: #080909;
+    text-align: left;
+    font: bold normal normal normal 16px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #42515f;
     opacity: 1;
-    font-family: Roboto;
 }
 
 .input {
-    
-    width: 60%;
-    padding: 12px;
-    border: 1px solid rgb(75, 117, 244);
-    border-radius: 4px;
-    resize: vertical;
+    width: 100%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #53b0e9;
+    border-radius: 3px;
+    opacity: 1;
+    resize: horizontal;
+    padding: 16px 12px;
+}
+
+textarea {
+    height: 80%;
+    width: 100%;
+    resize: none;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #53b0e9;
+    border-radius: 3px;
+    letter-spacing: -1px;
+    opacity: 1;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.column-data {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column-content {
+    flex: 2;
+}
+
+select {
+    padding: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #53b0e9;
+    border-radius: px;
+    text-align: left;
+    font: normal normal normal 18px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #3c3c3c;
+    opacity: 1px;
+    width: 90%;
+}
+
+.pincode {
+    padding: 13px 10px;
+}
+
+/*UC 3*/
+.buttons{
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    color: #f0f0f5;
+    opacity: 1;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 2px solid rgb(75, 117, 244);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.addButton {
+    background-color: #1591f7;
+    margin-right: 30px;
+}
+
+.resetButton {
+    background-color: #1591f7;
+    margin-left: 140px;
+    text-align: center;
+}
+
+error-output{                   
+    margin-left: 10px;
+    font-style: italic;
+    font-size: 12px;
+    color: red;
 }
