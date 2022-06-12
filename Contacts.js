@@ -75,8 +75,9 @@ class Contact {
   }
   }
 
-
+  //UC :: 6 - To capture the User Entries On Clicking sunbmit button
   toString(){
-    return `id ${this.id} \nName ${this.name} \nPhone Number ${this.phoneNumber} \nAddress ${this.address} \nCity ${this.city} \nState ${this.state} \nPin  ${this.pin}`;
+    return "Id = " + this.id +  ",  \nName = " + this.name + ",  \nAddress = " + this.address + ", \nPhone = " + this.phone + ", \nCity = " + this.city + ", \nState = " + this.state + ", \nPin = " + this.pin;
   }
+
 }
