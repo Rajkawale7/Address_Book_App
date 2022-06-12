@@ -155,7 +155,7 @@ const createContact = () => {
 };
 
   //setting and declaring the error-output
-  const setTextValue = (id, value) => {
+  const setTextValue = (id, value) => {   
     const element = document.querySelector(id);
     element.textContent = value;
   };
