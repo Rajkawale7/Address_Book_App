@@ -62,10 +62,73 @@ window.addEventListener("DOMContentLoaded", (event) => {
         setTextValue(".phone-error", error);
       }
     });
-
-    //setting and declaring the error-output
-    const setTextValue = (id, value) => {
-        const element = document.querySelector(id);
-        element.textContent = value;
-      };
 });
+
+// UC 5 :: on click - alert function - Reset button
+function resetForm() {
+  alert("The form will reset");
+}
+
+//on click function - Submit button
+function save() {
+
+  let contact = new Contact();                      
+  contact.id = new Date().getTime();
+
+  try {
+    contact.name = getInputValueById("#name");
+  } catch (error) {
+    setTextValue(".name-error", error);
+    throw error;
+  }
+
+  try {
+    contact.phone = getInputValueById("#phone");
+  } catch (error) {
+    setTextValue(".phone-error", error);
+    throw error;
+  }
+
+  try {
+    contact.address = getInputValueById("#address");
+  } catch (error) {
+    setTextValue(".address-error", error);
+    throw error;
+  }
+  
+  let city = getInputValueById("#city");
+  if (city != "Select City") {
+    contact.city = city;
+  } else {
+    throw "Please select city";
+  }
+
+  let state = getInputValueById("#state");
+  if (state != "Select State") {
+    contact.state = state;
+  } else {
+    throw "Please select state";
+  }
+
+  try {
+    contact.pin= getInputValueById("#pin");
+  } catch (error) {
+    setTextValue(".pin-error", error);
+    throw error;
+  }
+
+  console.log(contact.toString());
+  alert(contact.toString());         //Showing values on pop-up window screen
+}
+
+//setting and declaring the error-output
+const setTextValue = (id, value) => {
+  const element = document.querySelector(id);
+  element.textContent = value;
+};
+
+//Getting values
+function getInputValueById(property) {
+  let value = document.querySelector(property).value;
+  return value;
+}

@@ -25,7 +25,7 @@
 
     <!-- UC 2-->
     <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onadd="Add()">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">
                 <div class="form-head-text">Person Address Form</div>
                 <a href="Home_Page.html"><img class="form-head-image" src="assets\cancelButton (1).png" alt="logo"></a>
@@ -95,8 +95,8 @@
 
             <div class="buttons">
                 <div class="add-reset">
-                    <button type = "add" class="button addButton" id = "addButton">Add</button>
-                    <button type = "reset" class = "button resetButton">Reset</button>
+                    <button type="submit" class="button addButton" id="submitButton">Add</button>           <!-- UC 5-->
+                    <button type = "reset" class = "button resetButton">Reset</button>                      <!-- UC 5-->
                 </div>
             </div>
 
