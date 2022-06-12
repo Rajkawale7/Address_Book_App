@@ -33,6 +33,7 @@ class Contact {
     }
   }
   
+  //city
   get city() {
     return this._city;
   }
@@ -40,13 +41,13 @@ class Contact {
     this._city = city;
   }
 
+  //State
   get state() {
     return this._state;
   }
   set state(state) {
     this._state = state;
   }
-
 
   //3rd validation: User's pin code
   get pin() {
@@ -61,7 +62,6 @@ class Contact {
     }
   }
 
-  
   //4th validation: User's phone number
   get phone(){
     return this._phone;
@@ -79,5 +79,4 @@ class Contact {
   toString(){
     return "Id = " + this.id +  ",  \nName = " + this.name + ",  \nAddress = " + this.address + ", \nPhone = " + this.phone + ", \nCity = " + this.city + ", \nState = " + this.state + ", \nPin = " + this.pin;
   }
-
 }
