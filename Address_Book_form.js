@@ -92,15 +92,16 @@ function save ()  {     //Added UC-8
 
 //JSON object
 const createAndUpdateStorage = (contact) =>{
-  let contactList = JSON.parse(localStorage.getItem("ContactList"));
+  let contactList = JSON.parse(localStorage.getItem("contactList"));   //UC8 :: Address Book List
   if (contactList != undefined) {
     contactList.push(contact);
   } else {
-    alert(contact.toString());
-    alert("Contacts Created Succesfully");
-    localStorage.setItem("contactList", JSON.stringify(contactList));
+    contactList = [contact];
   }
-};
+  alert(contact.toString());
+  alert("Contacts Created Succesfully");
+  localStorage.setItem("contactList", JSON.stringify(contactList));
+}
 
 //After Save function
 const createContact = () => {
