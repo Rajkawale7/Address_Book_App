@@ -81,7 +81,7 @@ function resetForm() {
 }
 
 //on click function - Submit button
-function save ()  {     //Added UC-8
+const save = () => {     //Added UC-8
   try {
   let contact = createContact();
   createAndUpdateStorage(contact);
@@ -105,7 +105,7 @@ const createAndUpdateStorage = (contact) =>{
 
 //After Save function
 const createContact = () => {
-  let contact = new contact();                      
+  let contact = new Contact();                      
   contact.id = new Date().getTime();
 
     try {
