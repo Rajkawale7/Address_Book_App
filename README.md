@@ -1,6 +1,6 @@
 # Address_Book_App
 
-**************************** SECTION - 1 **********************************************
+********* SECTION - 1 *********
 --------------------------------------------------------------------------------------------------
 
 UC1 ::: Begin with creating an Address Book Form UI, Create a centre align box using div tag - Use flexbox and CSS properties
@@ -21,7 +21,7 @@ UC8 ::: Ability to Add the Address Book Entry into an Address Book List and stor
 
 UC9 ::: Handle Cancel and Reset Event - On Cancel redirect to home page, - On reset, reset the form with UC 9 no entries
 
-**************************** SECTION - 2 **********************************************
+********* SECTION - 2 **********
 --------------------------------------------------------------------------------------------------
 
 UC1 ::: Create the Page Header for the Home Page.
